@@ -1,0 +1,386 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>VixenFN | Home</title>
+    <meta property="og:title" content="VixenFN | Fortnite Hybrid Server">
+    <meta name="description" content="conspiracy">
+    <meta property="og:description" content="VixenFN is a fortnite hybrid server in which you can use every cosmetic.">
+    <meta name="twitter:card" content="summary">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#2F3136">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.discordapp.com/icons/1120357857393660075/e1ebe7d2dea3e8f8a508d089987a0fc3.webp?size=128" rel="shortcut icon" type="image/x-icon">
+    <meta name="twitter:card" content="summary">
+    <link rel="preload" href="https://vixenfn-launcher-1.conspiracylol.repl.co/assets/style.css" as="style">
+    <link rel="stylesheet" href="https://vixenfn-launcher-1.conspiracylol.repl.co/assets/site.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://vixenfn-launcher-1.conspiracylol.repl.co/assets/animate.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+   <script src="https://cdn.vixenfn.lol/assets/test.js"></script>
+  
+      
+    <script src="https://cdn.vixenfn.lol/assets/jquery.js" type="bdd308d28cab9080bbf6cade-text/javascript"></script>
+    <script src="https://ccdn.vixenfn.lol/assets/scripting.js" type="bdd308d28cab9080bbf6cade-text/javascript"></script>
+    <script src="https://cdn.vixenfn.lol/assets/idk.js" type="bdd308d28cab9080bbf6cade-text/javascript"></script>
+    <script src="https://cdn.vixenfn.lol/assets/fullcalendar.js" type="bdd308d28cab9080bbf6cade-text/javascript"></script>
+    <script src="https://cdn.vixenfn.lol/assets/widget.js" type="bdd308d28cab9080bbf6cade-text/javascript"></script>
+  <style>
+   
+
+    .download-icon {
+      margin-right: 5px;
+    }
+    
+    .enterDivBody {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+  }
+    
+   .enterDiv {
+    font-size: 15;
+    border: 1px solid white;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+       .typingEffect {
+  opacity: 0;
+  animation: appearAnimationV2 1s linear forwards;
+}
+
+@keyframes appearAnimationV2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+    
+   #writerV3-text {
+  opacity: 0;
+  animation: appearAnimation 1s linear forwards;
+}
+
+@keyframes appearAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+    .smallLinkUrlText {
+      font-size:15px;
+    }
+    .vixnText {
+      font-size:25px;
+      font:700 1em/1 Oswald,sans-serif;
+    text-shadow:0 0 80px rgba(255,255,255,.5);
+    background:url(https://i.gifer.com/7HHu.gif) repeat-y;
+    background-clip:text;
+    background-size:1500px;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:_anim_15zuj_1 80s linear infinite;
+    transform:translateZ(0);
+    backface-visibility:hidden
+    }
+    </style>
+    </head>
+    
+   
+      
+    <script type="text/javascript">
+    
+    let index = 0;
+    var TxtType = function (el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 10) || 2000;
+      this.txt = "";
+      this.tick();
+      this.isDeleting = false;
+    };
+    
+    TxtType.prototype.tick = function () {
+      var i = this.loopNum % this.toRotate.length;
+      var fullTxt = this.toRotate[i];
+    
+      if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+      } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+      }
+    
+      this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+    
+      var that = this;
+      var delta = 200 - Math.random() * 100;
+    
+      if (this.isDeleting) {
+        delta /= 2;
+      }
+    
+      if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === "") {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+      }
+    
+      setTimeout(function () {
+        that.tick();
+      }, delta);
+    };
+
+
+      
+    window.onload = function () {
+
+    window.checkLoginV2 = checkLoginV2;
+      
+     // eval(document.getElementById("proceedBtn").click());
+      var elements = document.getElementsByClassName("typewrite");
+      for (var i = 0; i < elements.length; i++) {
+        var toRotate = elements[i].getAttribute("data-type");
+        var period = elements[i].getAttribute("data-period");
+        if (toRotate) {
+          new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+      }
+      // INJECT CSS
+      var css = document.createElement("style");
+      css.type = "text/css";
+      css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+      document.body.appendChild(css);
+    };
+    
+    
+    </script>
+
+      
+    <main id="mainPageShit" background-image:linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('uploads/background/'); background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: fixed; background-position: center;">
+    <div class="fixed w-full h-full"></div>
+    <div class="biolink" style="height:100%;width:100%;">
+    <div class="relative w-full h-full px-4 py-16 table">
+    <div class="table-cell align-middle text-center">
+    <div class="bg-main rounded-md shadow-4xl w-full mx-auto card animate-slide-up not-last-child:mb-12 max-w-[1100px] mt-14">
+    <div class="p-10">
+    <div class="not-last-child:mb-8">
+    <div class="-mt-[85px]">
+    <img class="w-44 h-44 rounded-full mx-auto shadow-avatar" src="https://cdn.discordapp.com/icons/1120357857393660075/e1ebe7d2dea3e8f8a508d089987a0fc3.webp?size=128" title="Image" alt="Image" draggable="false"> </div>
+    </div>
+    <div class="not-last-child:mb-8">
+    <div class="flex smallLinkUrlText justify-center items-center space-x-2">
+    <label style="font-size:25px;" class="text-[20px] typingEffect _header_15zuj_77 text-white font-semibold" >VixenFN v3</label>
+    </div>
+    <p class="text-sm">
+    <em class="typingEffect" style=" font-size: 15px;" id="cord-writer" >VixenFN was made by @conspiracyy</em>
+    </p>
+   <p class="text-sm">
+    <em class="typingEffect" style="font-size: 15px;" id="cord-writer2 ">Join the discord: <a href="https://discord.gg/vixen">discord.gg/vixen</a></em>
+    </p>
+      <p class="text-sm">
+    <em class="typingEffect" style=" font-size: 15px;" id="cord-writer3">Official website: <a href="javascript:void()">https://vixenfn.lol </a> </em>
+    </p>
+    </div>
+    <div class="not-last-child:mb-8">
+    <div class="mx-auto max-w-[750px]">
+    <p>
+    </p><pre id="writerV3-text" class="typingEffectV2" > Dashboard is <a onclick="vxnLauncher.openDashboard()">accessable via here! </a>
+      </pre>
+    <p></p>
+    </div>
+    </div>
+       <div class="not-last-child:mb-8">
+    <div class="mx-auto max-w-[750px]">
+    <p>
+    
+    </div>
+    </div>
+      
+    <div class="flex justify-center items-center space-x-2">
+    <div style="text-align: center;">
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="1w-full mx-auto card animate-slide-up not-last-child:mb-12 max-w-[1100px]">
+    <div class="!p-0">
+    <div class="flex flex-wrap justify-between gap-6">
+    <a href="https://www.discord.gg/vixen" target="_blank" rel="noopener noreferrer nofollow" title="https://www.discord.gg/vixen" class="bg-main rounded-xl flex-[100%] sm:flex-[45%] animate-slide-up shadow-4xl p-3 button" style="will-change: opacity, transform">
+    <div class="flex items-center justify-between space-x-6">
+    <span class="bg-secondary rounded-xl aspect-square h-16 p-3 flex items-center justify-center">
+    <img class="drop-shadow-twitter" src="https://vixenfn-launcher-1.conspiracylol.repl.co/assets/discord.svg">
+    </span>
+    <h2 class="w-full typingEffect text-left text-grey">
+    Join the discord!
+    </h2>
+    <span class="w-20" style="margin-left: 157px;">
+    <img src="https://vixenfn-launcher-1.conspiracylol.repl.co/assets/link-button-arrow.png" style="width: 14px;" class="link-arrows">
+    </span>
+    </div>
+    </a>
+    <a onclick="vxnLauncher.launchVxn()" target="_blank" rel="noopener noreferrer nofollow" class="bg-main rounded-xl flex-[100%] sm:flex-[45%] animate-slide-up shadow-4xl p-3 button" style="will-change: opacity, transform">
+    <div class="flex items-center justify-between space-x-6">
+    <span class="bg-secondary rounded-xl aspect-square h-16 p-3 flex items-center justify-center">
+    <img  src="https://cdn.vxn.lol/assets/openInNew.png">
+    </span>
+    <h2 onclick="vxnLauncher.launchVxn()" class="w-full typingEffect text-left text-grey">
+      Launch VixenFN!
+    </h2>
+    <span class="w-20" style="margin-left: 157px;">
+    <div style="width: 45px;" class="w-full fas fa-download download-icon typingEffect text-left text-grey"> </div>
+    </span>
+    </span>
+    </div>
+    </a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </main>
+    <script>
+     const url = 'https://conspiracy.rip/viewcount';
+     async function fetchData(url) {
+  try {
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    
+    const data = await response.text();
+    
+    var viewCount = document.getElementById("viewcount")
+    viewCount.innerHTML = data;
+    return data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return null;
+  }
+}
+
+
+fetchData(url)
+  .then(); 
+    </script>
+    <script>(function(){var js = "window['__CF$cv$params']={r:'7f8517eebd4f2d9a',t:'MTY5MjMwODYxNi45MjAwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+    
+    <style type="text/css">.typewrite > .wrap { border-right: 0.08em solid #fff}</style><style type="text/css">.typewrite > .wrap { border-right: 0.08em solid #fff}</style></body></html>
+
+
+
+
+    <script>
+      let typingInterval;
+
+      function doEffect() {
+        const textElement = document.getElementById("writerV3-text");
+const text = textElement.textContent;
+const delay = 35; // 35 milliseconds delay
+        typeText(0);
+      }
+function typeText(index) {
+  if (index < text.length) {
+    textElement.textContent = text.substring(0, index + 1);
+    setTimeout(() => {
+      typeText(index + 1);
+    }, delay);
+  }
+
+  
+}
+
+let typingIntervalV9;
+const typingElementsV9 = document.getElementsByClassName("typingEffectV2");
+
+const delayV9 = 45; // 35 milliseconds delay
+
+function startTypingv5() {
+  for (let i = 0; i < typingElementsV9.length; i++) {
+    const elementV9 = typingElementsV9[i];
+    const textV9 = elementV9.textContent;
+    typeTextV5(elementV9, textV9, 0);
+  }
+}
+
+function typeTextV9(elementV10, textV10, indexV10) {
+  if (indexV10 < textV6.length) {
+    elementV10.textContent = textV10.substring(0, indexV10 + 1);
+    typingIntervalV9 = setTimeout(() => {
+      typeTextV9(elementV10, textV10, indexV10 + 1);
+    }, delayV9); // Use delayV5 instead of delay
+  }
+}
+      const typingElementsV69 = document.getElementsByClassName("typingEffect");
+
+let typingIntervalV5;
+const typingElementsV5 = document.getElementsByClassName("typingEffect");
+
+const delayV5 = 45; // 35 milliseconds delay
+
+function startTypingv5() {
+  for (let i = 0; i < typingElementsV5.length; i++) {
+    const elementV5 = typingElementsV5[i];
+    const textV5 = elementV5.textContent;
+    typeTextV5(elementV5, textV5, 0);
+  }
+}
+
+function typeTextV5(elementV6, textV6, indexV6) {
+  if (indexV6 < textV6.length) {
+    elementV6.textContent = textV6.substring(0, indexV6 + 1);
+    typingIntervalV5 = setTimeout(() => {
+      typeTextV5(elementV6, textV6, indexV6 + 1);
+    }, delayV5); // Use delayV5 instead of delay
+  }
+}
+
+
+       
+
+        var audioV1 = new Audio('https://conspiracy.rip/audio.mp3');
+        
+       
+        
+           var enterBodyElem = document.getElementById("enterDivBodyElement");
+        enterBodyElem.classList.remove("enterDivBody");
+        enterBodyElem.style.visibility = 'none';
+  
+        var mainPageElementFr = document.getElementById("mainPageShit");
+        mainPageElementFr.style.visibility = 'block';
+        mainPageElementFr.style.display = 'block';
+       // eval(document.getElementById("proceedBtn").click());
+       audioV1.play();
+       audioV1.loop = true;
+        // Start the typing effect
+       startTypingv5();
+       
+     
+   
+      
+
+
+
+
+      
+    </script>
+
+
+<script>
+
+
+</script>
+     <audio id="audio" src="https://conspiracy.rip/audio.mp3"></audio>
+

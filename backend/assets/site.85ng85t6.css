@@ -1,0 +1,108 @@
+
+      .fc-ab-root {
+        display: none !important
+      }
+
+      body>div.fc-ab-root {
+        display: none !important
+      }
+
+      .fbs-auth__container.fbs-auth__adblock {
+        display: none !important
+      }
+
+      .overlay-34_Kj {
+        display: none !important
+      }
+
+      .wrapper-3AzfF {
+        display: none !important
+      }
+
+      .fEy1Z2XT {
+        display: none !important
+      }
+
+      .nytc---modal-window---windowContainer.nytc---modal-window---isShown.nytc---shared---blackBG {
+        display: none !important
+      }
+
+      .tp-modal {
+        display: none !important
+      }
+
+      .tp-backdrop.tp-active {
+        display: none !important
+      }
+
+      .c-nudge__container.c-gate__container {
+        display: none !important
+      }
+
+      .c-nudge__container.c-regGate__container {
+        display: none !important
+      }
+
+      .css-n7r8pg {
+        display: none !important
+      }
+
+      .css-1bd8bfl {
+        display: none !important
+      }
+
+      .overlay__59af11e2 {
+        display: none !important
+      }
+
+      .tp_modal {
+        display: none !important
+      }
+
+      .tp-backdrop.tp-active {
+        display: none !important
+      }
+
+      div[class^='sp_message_container'] {
+        display: none !important
+      }
+
+      div[class^='sp_veil'] {
+        display: none !important
+      }
+      .download-button {
+        box-align: center;
+        display: inline-block;
+        vertical-align: center;
+        align-self: center;
+        align-content: center;
+        align-items: center;
+        background-color: #100129;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 4px;
+        border: 0.05em solid black;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      .vixen-container {
+        text-decoration: none;
+        font-size: 12px;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #3d3d3d;
+        border-radius: 4px;
+        border: 0.05em solid black;
+        display: inline-block;
+        color: #d4d9d6;
+        text-shadow: black;
+        text-shadow: 45px;
+
+      }
+      .vixen-header {
+        color: #d3ded6;
+        text-align: center;
+      }
+      .download-button:hover {
+        background-color: #290a5c;
+      }
